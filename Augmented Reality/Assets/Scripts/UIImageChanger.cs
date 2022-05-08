@@ -28,6 +28,11 @@ public class UIImageChanger : MonoBehaviour
 
         //ensure the image always starts at the first image in the list
         imageToChange.GetComponent<MeshRenderer>().material = imageList[0];
+        
+    }
+
+    private void Update()
+    {
         UpdateIndexUI();
     }
 
@@ -36,7 +41,7 @@ public class UIImageChanger : MonoBehaviour
         if(active)
         {
             //check if array index is below max value, if above dont change image as there wont be anything to change to
-            if (imageIndex < imageList.Count)
+            if (imageIndex < imageList.Count - 1)
             {
                 //increment the index before changing
                 imageIndex++;
@@ -47,7 +52,7 @@ public class UIImageChanger : MonoBehaviour
                     return;
                 }
                 imageToChange.GetComponent<MeshRenderer>().material = imageList[imageIndex];
-                UpdateIndexUI();
+                
             }
         }
     }
@@ -68,7 +73,7 @@ public class UIImageChanger : MonoBehaviour
                     return;
                 }
                 imageToChange.GetComponent<MeshRenderer>().material = imageList[imageIndex];
-                UpdateIndexUI();
+                
             }
         }
     }

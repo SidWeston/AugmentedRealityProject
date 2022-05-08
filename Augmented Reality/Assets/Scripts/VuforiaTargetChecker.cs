@@ -6,13 +6,8 @@ using Vuforia;
 public class VuforiaTargetChecker : MonoBehaviour
 {
 
-    DefaultTrackableEventHandler eventHandler;
+    public DefaultTrackableEventHandler eventHandler;
     public UIImageChanger imageChanger;
-
-    private void Awake()
-    {
-        eventHandler = GetComponent<DefaultTrackableEventHandler>();
-    }
 
     // Update is called once per frame
     void Update()

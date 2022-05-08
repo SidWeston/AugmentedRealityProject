@@ -6,13 +6,8 @@ using UnityEngine.Video;
 
 public class VuforiaVideoPlayer : MonoBehaviour
 {
-    DefaultTrackableEventHandler eventHandler;
+    public DefaultTrackableEventHandler eventHandler;
     public VideoPlayer videoPlayer;
-
-    private void Awake()
-    {
-        eventHandler = GetComponent<DefaultTrackableEventHandler>();
-    }
 
     // Update is called once per frame
     void Update()
