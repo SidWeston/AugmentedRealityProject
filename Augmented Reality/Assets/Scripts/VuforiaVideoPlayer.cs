@@ -27,7 +27,7 @@ public class VuforiaVideoPlayer : MonoBehaviour
         {
             if(videoPlayer.isPlaying)
             {
-                videoPlayer.Stop();
+                videoPlayer.Pause();
             }
         }
     }
